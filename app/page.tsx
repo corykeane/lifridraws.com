@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { VideoBg } from "./_components/VideoBg";
-import { home_hero } from "./_data/data";
+import { home_hero, service_section } from "./_data/data";
 
 export default function Home() {
   return (
@@ -49,6 +49,27 @@ export default function Home() {
           </div>
         </div>
         <VideoBg />
+      </section>
+      {/* services */}
+      <section className="home_service ">
+        <div className="container mx-auto max-w-screen-lg py-10 px-3 ">
+          {/* section heading */}
+          <h2 className="text-2xl text-center">My Services</h2>
+          {/* lists of services */}
+          <div className="flex gap-6 justify-around pt-8 max-md:flex-col ">
+            {/* service */}
+            {service_section.map(({ alt, href, image, label }, index) => (
+              <Link
+                key={index}
+                href={href}
+                className="text-center flex flex-col items-center"
+              >
+                <img className="max-sm:w-24 w-32" src={image} alt={alt} />
+                <h3 className="text-2xl my-3 underline">{label}</h3>
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );

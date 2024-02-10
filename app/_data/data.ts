@@ -63,3 +63,24 @@ export const home_hero = {
     ],
   },
 };
+
+export const service_section = [
+  {
+    href: "/",
+    image: "/images/digital-artwork.png",
+    alt: "Lifri Draw Artwork service",
+    label: "Artwork",
+  },
+  {
+    href: "/",
+    image: "/images/animation.png",
+    alt: "Lifri Draw Animation service",
+    label: "Animation",
+  },
+  {
+    href: "/",
+    image: "/images/streamer emotes.png",
+    alt: "Lifri Draw Streamer Emotes service",
+    label: "Streamer Emotes",
+  },
+];
