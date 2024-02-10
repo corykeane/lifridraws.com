@@ -7,11 +7,17 @@ export default function Home() {
   return (
     <>
       {/* hero */}
-      <section className="home_hero relative flex h-screen mb-1 overflow-hidden ">
-        <div className="container mx-auto max-w-screen-lg  relative grid grid-cols-2 gap-3 gap-x-14 content-center items-center z-30">
+      <section className="home_hero relative flex mb-1 overflow-hidden max-xl:h-auto ">
+        <div className="container mx-auto max-w-screen-lg py-16 px-3 relative grid grid-cols-2 gap-3 gap-x-14 content-center items-center z-30 max-xl:grid-cols-1 max-xl:justify-items-center">
           <div className="hero_left flex flex-col gap-1 ">
-            <img src={home_hero.left.hero_avatar} alt="lifri-avatar.png" />
-            <div className="social_medies flex align-middle gap-4">
+            <div>
+              <img
+                src={home_hero.left.hero_avatar}
+                className="max-xl:h-3/6 max-xl:w-96 max-xl:mx-auto max-sm:w-72"
+                alt="lifri-avatar.png"
+              />
+            </div>
+            <div className="social_medies flex align-middle gap-4 max-sm:flex-row max-xl:justify-center">
               {home_hero.left.socail_links.map(({ alt, href, icon }, index) => (
                 <a
                   key={index}
@@ -19,17 +25,17 @@ export default function Home() {
                   target="_blank"
                   className="socialmedia "
                 >
-                  <Image width={60} height={50} src={icon} alt={alt} />
+                  <img className="max-sm:w-10 w-12" src={icon} alt={alt} />
                 </a>
               ))}
             </div>
           </div>
-          <div className="hero_right -mt-16">
+          <div className="hero_right -mt-16 max-xl:mt-0 max-xl:text-center ">
             <h1 className="text-4xl font-medium text-black">
               {home_hero.right.heading}{" "}
             </h1>
             <p className="my-4 text-lg">{home_hero.right.desc} </p>
-            <div className="btn_hero flex align-middle gap-5">
+            <div className="btn_hero flex align-middle gap-5  max-xl:justify-center max-sm:flex-col max-sm:items-center">
               {home_hero.right.buttons.map(({ href, label }, index) => (
                 <Link
                   key={index}
