@@ -74,3 +74,10 @@ export default function Home() {
     </>
   );
 }
+
+export async function getServerSideProps() {
+  // You can return an empty object or null
+  return {
+    props: {},
+  };
+}
